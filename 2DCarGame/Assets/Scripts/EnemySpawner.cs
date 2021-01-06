@@ -19,18 +19,18 @@ public class EnemySpawner : MonoBehaviour
         while (looping); 
     }
 
-    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveToSpawn)
+    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
     {
-        /////////ovde je bilo 0 i <
-        for (int enemyCount = 1; enemyCount <= waveToSpawn.GetNumberOfEnemies(); enemyCount++)
+        /////////ovde je bilo nula i manje
+        for (int enemyCount = 1; enemyCount <= waveConfig.GetNumberOfEnemies(); enemyCount++)
         {
             var newEnemy = Instantiate(
-                            waveToSpawn.GetEnemyPrefab(),
-                            waveToSpawn.GetWaypoints()[0].transform.position,
+                            waveConfig.GetEnemyPrefab(),
+                            waveConfig.GetWaypoints()[0].transform.position,
                             Quaternion.identity);
 
-            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveToSpawn);  //adding enemy to path
-            yield return new WaitForSeconds(waveToSpawn.GetTimeBetweenSpawns());
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);  //adding enemy to path
+            yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
         }
 
 
