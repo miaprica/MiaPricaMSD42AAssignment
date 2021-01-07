@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 8339969459836264454}
   - component: {fileID: 6403191512531246278}
   - component: {fileID: 4062468098133817787}
-  - component: {fileID: -4024284642402777287}
   - component: {fileID: -23704718905791714}
   - component: {fileID: -6099474322444561474}
   m_Layer: 9
@@ -114,20 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
---- !u!114 &-4024284642402777287
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4748861414511898696}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59090889fcaf2524e905d6462dede782, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  waypointsList: []
-  waveConfig: {fileID: 0}
 --- !u!60 &-23704718905791714
 PolygonCollider2D:
   m_ObjectHideFlags: 0

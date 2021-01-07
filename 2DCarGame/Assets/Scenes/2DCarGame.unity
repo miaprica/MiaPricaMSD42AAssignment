@@ -310,6 +310,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5028731216146262488, guid: a8c9257bda9a9a84dbba752f6a30d883, type: 3}
+      propertyPath: waveConfigList.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028731216146262488, guid: a8c9257bda9a9a84dbba752f6a30d883, type: 3}
+      propertyPath: waveConfigList.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5028731216146262489, guid: a8c9257bda9a9a84dbba752f6a30d883, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

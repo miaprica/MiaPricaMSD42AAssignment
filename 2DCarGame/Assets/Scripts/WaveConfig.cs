@@ -23,7 +23,7 @@ public class WaveConfig : ScriptableObject
     {
         var waveWaypoints = new List<Transform>();
 
-        foreach (Transform child in pathPrefab.transform)  //adding to the list
+        foreach (Transform child in pathPrefab.transform)  //adding to the list.......
         {
             waveWaypoints.Add(child);
         }
