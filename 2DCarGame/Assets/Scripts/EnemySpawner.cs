@@ -9,28 +9,29 @@ public class EnemySpawner : MonoBehaviour
 
     int startingWave = 0;
 
+    // Start is called before the first frame update
     IEnumerator Start()
     {
         do
         {
+            //spawning all waves
             yield return StartCoroutine(SpawnAllWaves());
         }
 
         while (looping); 
     }
 
-    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveConfig)
+    private IEnumerator SpawnAllEnemiesInWave(WaveConfig waveToSpawn)
     {
-        /////////ovde je bilo nula i manje
-        for (int enemyCount = 1; enemyCount <= waveConfig.GetNumberOfEnemies(); enemyCount++)
+        for (int enemyCount = 0; enemyCount < waveToSpawn.GetNumberOfEnemies(); enemyCount++)
         {
             var newEnemy = Instantiate(
-                            waveConfig.GetEnemyPrefab(),
-                            waveConfig.GetWaypoints()[0].transform.position,
+                            waveToSpawn.GetEnemyPrefab(),
+                            waveToSpawn.GetWaypoints()[0].transform.position,
                             Quaternion.identity);
 
-            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveConfig);  //adding enemy to path
-            yield return new WaitForSeconds(waveConfig.GetTimeBetweenSpawns());
+            newEnemy.GetComponent<EnemyPathing>().SetWaveConfig(waveToSpawn);
+            yield return new WaitForSeconds(waveToSpawn.GetTimeBetweenSpawns());
         }
 
 
@@ -38,9 +39,15 @@ public class EnemySpawner : MonoBehaviour
 
     private IEnumerator SpawnAllWaves()
     {
-        foreach (WaveConfig currentWave in waveConfigList)                         ////waiting for enemies ton reach the last waypoint and looping
+        foreach (WaveConfig currentWave in waveConfigList)
         {
             yield return StartCoroutine(SpawnAllEnemiesInWave(currentWave));
         }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }
