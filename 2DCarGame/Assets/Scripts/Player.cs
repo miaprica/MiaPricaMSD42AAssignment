@@ -8,6 +8,9 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 0.7f;
     [SerializeField] float health = 100f;
 
+    [SerializeField] AudioClip playerHealthReduceSound;
+    [SerializeField] [Range(0, 1)] float playerHealthReduceVolume = 0.75f;
+
     float xMin, xMax, yMin, yMax;
 
     // Start is called before the first frame update
@@ -45,6 +48,7 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer dmgDealer)
     {
         health -= dmgDealer.GetDamage();
+        AudioSource.PlayClipAtPoint(playerHealthReduceSound, Camera.main.transform.position, playerHealthReduceVolume);
 
         if (health <= 0)
         {

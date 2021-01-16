@@ -99,6 +99,8 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 0.7
   health: 50
+  playerHealthReduceSound: {fileID: 8300000, guid: 367faed6ae259e24d82302645c0ed58d, type: 3}
+  playerHealthReduceVolume: 0.01
 --- !u!60 &8096014537668890440
 PolygonCollider2D:
   m_ObjectHideFlags: 0
