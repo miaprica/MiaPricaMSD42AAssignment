@@ -48,8 +48,14 @@ public class Player : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        Destroy(gameObject);
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
     //moving the player car on x axis
