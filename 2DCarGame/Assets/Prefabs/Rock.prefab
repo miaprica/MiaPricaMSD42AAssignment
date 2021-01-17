@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 4549461677235344799}
   - component: {fileID: -336557118164865186}
   - component: {fileID: 6671072094074238679}
+  - component: {fileID: 3248680461040731504}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Untagged
@@ -341,3 +342,20 @@ PolygonCollider2D:
       - {x: -1.27, y: -4.755}
       - {x: -1.1, y: -4.7349997}
       - {x: -1.04, y: -4.725}
+--- !u!114 &3248680461040731504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3131797682424631999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100f03dc4dd6a734fabf280ec8d8bd93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  deathVFX: {fileID: 4247709956885059615, guid: f6ee870dc4a5f21428c765c27fbefb1b, type: 3}
+  explosionDuration: 1
+  obstacleDestroySound: {fileID: 8300000, guid: 9fcdee4da45b7114e9febc7711476fe5, type: 3}
+  obstacleDestroySoundVolume: 0.3

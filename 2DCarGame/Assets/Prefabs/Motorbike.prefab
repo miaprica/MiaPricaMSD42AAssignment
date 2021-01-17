@@ -118,6 +118,11 @@ MonoBehaviour:
   maxTimeBetweenShots: 0.8
   bullet: {fileID: 8221434607327807552, guid: e53decc7db84e2e43b3df91dbfe64e5e, type: 3}
   bulletSpeed: 0.2
+  health: 100
+  deathVFX: {fileID: 4247709956885059615, guid: f6ee870dc4a5f21428c765c27fbefb1b, type: 3}
+  explosionDuration: 1
+  enemyDeathSound: {fileID: 8300000, guid: 9fcdee4da45b7114e9febc7711476fe5, type: 3}
+  enemyDeathSoundVolume: 0.3
 --- !u!114 &-3025576114502154813
 MonoBehaviour:
   m_ObjectHideFlags: 0

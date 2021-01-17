@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1302738889658392045}
   - component: {fileID: -5263843529647207820}
   - component: {fileID: 8096014537668890440}
+  - component: {fileID: -962241665215114250}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -99,8 +100,8 @@ MonoBehaviour:
   moveSpeed: 10
   padding: 0.7
   health: 50
-  playerHealthReduceSound: {fileID: 8300000, guid: 367faed6ae259e24d82302645c0ed58d, type: 3}
-  playerHealthReduceVolume: 0.01
+  playerHealthReduceSound: {fileID: 8300000, guid: 2b4bd83425ee6294e8c051d969289577, type: 3}
+  playerHealthReduceVolume: 1
 --- !u!60 &8096014537668890440
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -328,3 +329,16 @@ PolygonCollider2D:
       - {x: 1.0841814, y: -11.240325}
       - {x: 1.3537618, y: -11.228604}
       - {x: 1.5647376, y: -11.216883}
+--- !u!114 &-962241665215114250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4536591018466619047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0081d51e40a0ec40abadfb554644d9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 100

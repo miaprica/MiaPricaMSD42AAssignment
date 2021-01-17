@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2358052258206026012}
   - component: {fileID: 4265552396059066567}
   - component: {fileID: 8184840998071389462}
+  - component: {fileID: 8048502376388943044}
   m_Layer: 0
   m_Name: Hole
   m_TagString: Untagged
@@ -478,3 +479,20 @@ PolygonCollider2D:
       - {x: 1.0699999, y: 1.9549999}
       - {x: 1.11, y: 2.0449998}
       - {x: 1.11, y: 2.155}
+--- !u!114 &8048502376388943044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 336800144608602283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 100f03dc4dd6a734fabf280ec8d8bd93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  deathVFX: {fileID: 4247709956885059615, guid: f6ee870dc4a5f21428c765c27fbefb1b, type: 3}
+  explosionDuration: 1
+  obstacleDestroySound: {fileID: 8300000, guid: 9fcdee4da45b7114e9febc7711476fe5, type: 3}
+  obstacleDestroySoundVolume: 0.3
