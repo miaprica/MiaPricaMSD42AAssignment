@@ -314,6 +314,10 @@ PrefabInstance:
       propertyPath: playerHealthReduceVolume
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -5263843529647207820, guid: 53263780de069704699bd51e6cc3ed40, type: 3}
+      propertyPath: playerDeathSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 9fcdee4da45b7114e9febc7711476fe5, type: 3}
     - target: {fileID: 2021485991425853710, guid: 53263780de069704699bd51e6cc3ed40, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.6
@@ -680,6 +684,34 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1872614311776796954, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -551.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872614311776796954, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1056.7407
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872614311776796954, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -66
+      objectReference: {fileID: 0}
+    - target: {fileID: 1872614311776796954, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 131.99925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884781502730534807, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884781502730534807, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4884781502730534807, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6863489277219629377, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -767,6 +799,10 @@ PrefabInstance:
     - target: {fileID: 6863489277219629381, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8422681246781983479, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
+      propertyPath: m_Maskable
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2c64cef7197d2d74ea7b1506abb1616a, type: 3}
@@ -907,13 +943,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Shredder
       objectReference: {fileID: 0}
+    - target: {fileID: 8764815495514781979, guid: 635185546484ba448b0d328f876d002f, type: 3}
+      propertyPath: playerScoreSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 051a64817ea9bd442ac2b6fa2e62bfda, type: 3}
+    - target: {fileID: 8764815495514781979, guid: 635185546484ba448b0d328f876d002f, type: 3}
+      propertyPath: playerScoreSoundVolume
+      value: 0.41
+      objectReference: {fileID: 0}
     - target: {fileID: 8764815495514781981, guid: 635185546484ba448b0d328f876d002f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8764815495514781981, guid: 635185546484ba448b0d328f876d002f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.24
+      value: -9.28
       objectReference: {fileID: 0}
     - target: {fileID: 8764815495514781981, guid: 635185546484ba448b0d328f876d002f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -966,15 +1010,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7436518676111878121, guid: 1e0832f1d79de574fb01432e491f4060, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.46930826
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7436518676111878121, guid: 1e0832f1d79de574fb01432e491f4060, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.24202143
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7436518676111878121, guid: 1e0832f1d79de574fb01432e491f4060, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 9.9769945
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7436518676111878121, guid: 1e0832f1d79de574fb01432e491f4060, type: 3}
       propertyPath: m_LocalRotation.x

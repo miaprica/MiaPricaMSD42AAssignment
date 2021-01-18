@@ -766,4 +766,4 @@ MonoBehaviour:
   deathVFX: {fileID: 4247709956885059615, guid: f6ee870dc4a5f21428c765c27fbefb1b, type: 3}
   explosionDuration: 1
   obstacleDestroySound: {fileID: 8300000, guid: 9fcdee4da45b7114e9febc7711476fe5, type: 3}
-  obstacleDestroySoundVolume: 0.3
+  obstacleDestroySoundVolume: 0.7

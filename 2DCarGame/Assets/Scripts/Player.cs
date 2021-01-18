@@ -14,6 +14,9 @@ public class Player : MonoBehaviour
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration = 1f;
 
+    [SerializeField] AudioClip playerDeathSound;
+    [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
+
     float xMin, xMax, yMin, yMax;
 
     // Start is called before the first frame update
@@ -63,6 +66,7 @@ public class Player : MonoBehaviour
     {
         Destroy(gameObject);
         GameObject explosion = Instantiate(deathVFX, transform.position, Quaternion.identity);
+        AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
         Destroy(explosion, explosionDuration);
         FindObjectOfType<Level>().LoadGameOver();
     }
