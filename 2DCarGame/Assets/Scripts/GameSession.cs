@@ -36,14 +36,6 @@ public class GameSession : MonoBehaviour
         score += scoreValue;
     }
 
-    public void Win()
-    {
-        if (score >= 100)
-        {
-            FindObjectOfType<Level>().LoadWinnerScreen();
-        }
-    }
-
     public void ResetGame()
     {
         Destroy(gameObject);

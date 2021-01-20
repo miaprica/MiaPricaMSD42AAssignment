@@ -6,7 +6,7 @@ public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float padding = 0.7f;
-    [SerializeField] float health = 100f;
+    [SerializeField] int health = 50;
 
     [SerializeField] AudioClip playerHealthReduceSound;
     [SerializeField] [Range(0, 1)] float playerHealthReduceVolume = 0.75f;
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] AudioClip playerDeathSound;
     [SerializeField] [Range(0, 1)] float playerDeathSoundVolume = 0.75f;
 
-    float xMin, xMax, yMin, yMax;
+    float xMin, xMax;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +37,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         Move();
+        Win();
+    }
+
+    public int GetHealth()
+    {
+        return health;
     }
 
     private void OnTriggerEnter2D(Collider2D otherObject)
@@ -54,10 +60,12 @@ public class Player : MonoBehaviour
     private void ProcessHit(DamageDealer dmgDealer)
     {
         health -= dmgDealer.GetDamage();
+        int score = FindObjectOfType<GameSession>().GetScore();
         AudioSource.PlayClipAtPoint(playerHealthReduceSound, Camera.main.transform.position, playerHealthReduceVolume);
 
-        if (health <= 0)
+        if (health <= 0 && score < 100)  //task 2, question f)       
         {
+            health = 0;
             Die();
         }
     }
@@ -69,6 +77,18 @@ public class Player : MonoBehaviour
         AudioSource.PlayClipAtPoint(playerDeathSound, Camera.main.transform.position, playerDeathSoundVolume);
         Destroy(explosion, explosionDuration);
         FindObjectOfType<Level>().LoadGameOver();
+    }
+
+
+    private void Win()
+    {
+        int score = FindObjectOfType<GameSession>().GetScore();
+
+        if (score >= 100)
+        {
+            score = 100;
+            FindObjectOfType<Level>().LoadWinnerScreen();
+        }
     }
 
     //moving the player car on x axis
